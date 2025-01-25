@@ -38,11 +38,14 @@ const TeamArdra: React.FC = () => {
           {/* Desktop Text */}
           <h1 className="text-[12vh] font-bold italic lg:text-[23vh] hidden md:block">
             <span
-              className="text-white"
               style={{
-                WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
-                WebkitTextFillColor: "white",
-                textRendering: "geometricPrecision"// Enhances stroke rendering
+                textShadow: `
+                  -3px -3px 0 #3B82F6,
+                  3px -3px 0 #3B82F6,
+                  -3px 3px 0 #3B82F6,
+                  3px 3px 0 #3B82F6`, // Simulates an outline effect in blue
+                color: "white", // Ensures the text inside the shadow is white
+                display: "inline-block",
               }}
             >
               TEAM&nbsp;
@@ -55,9 +58,13 @@ const TeamArdra: React.FC = () => {
             <span
               className="text-white"
               style={{
-                WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
-                WebkitTextFillColor: "white",
-                letterSpacing: "0px", // Removes letter spacing
+                textShadow: `
+                  -3px -3px 0 #3B82F6,
+                  3px -3px 0 #3B82F6,
+                  -3px 3px 0 #3B82F6,
+                  3px 3px 0 #3B82F6`, // Blue outline effect for mobile view
+                color: "white",
+                letterSpacing: "0px", // Removes extra spacing
               }}
             >
               TEAM&nbsp;
