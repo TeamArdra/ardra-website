@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 const TeamArdra: React.FC = () => {
   return (
     <div>
@@ -26,23 +25,39 @@ const TeamArdra: React.FC = () => {
           className="hidden group-hover:block" // Show this image on hover
         />
       </div>
+
       <div className="flex items-center flex-wrap lg:flex-nowrap">
-      {/* Header Section */}
-      <div className={`text-center lg:text-left`}>
-        <h1 className="text-[12vh] font-black italic lg:text-[23vh]">
-          <span
-            className="text-white"
-            style={{
-              WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
-              WebkitTextFillColor: "white",
-            }}
-          >
-            TEAM&nbsp;
-          </span>
-          <span className="text-blue-500 italic">ARDRA</span>
-        </h1>
-      </div>
-        
+        {/* Header Section */}
+        <div className="text-center lg:text-left">
+          {/* Desktop Text */}
+          <h1 className="text-[12vh] font-black italic lg:text-[23vh] hidden md:block">
+            <span
+              className="text-white"
+              style={{
+                WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
+                WebkitTextFillColor: "white",
+              }}
+            >
+              TEAM&nbsp;
+            </span>
+            <span className="text-blue-500 italic">ARDRA</span>
+          </h1>
+
+          {/* Mobile Text */}
+          <h1 className="text-[12vh] font-black italic md:hidden">
+            <span
+              className="text-white"
+              style={{
+                WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
+                WebkitTextFillColor: "white",
+              }}
+            >
+              TEAM&nbsp;
+            </span>
+            <br />
+            <span className="text-blue-500 italic">ARDRA</span>
+          </h1>
+        </div>
 
         {/* Full-Height Image */}
         <div className="hidden md:flex flex-grow h-[40vh] md:h-[25vh] relative">
