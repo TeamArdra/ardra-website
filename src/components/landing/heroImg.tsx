@@ -1,5 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 const TeamArdra: React.FC = () => {
   return (
@@ -26,9 +32,9 @@ const TeamArdra: React.FC = () => {
         />
       </div>
 
-      <div className="flex items-center flex-wrap lg:flex-nowrap">
+      <div className="flex items-center flex-wrap lg:flex-nowrap w-full lg:w-auto text-center">
         {/* Header Section */}
-        <div className="text-center lg:text-left">
+        <div className={`{montserrat.className} text-center lg:text-left`}>
           {/* Desktop Text */}
           <h1 className="text-[12vh] font-black italic lg:text-[23vh] hidden md:block">
             <span
@@ -44,23 +50,29 @@ const TeamArdra: React.FC = () => {
           </h1>
 
           {/* Mobile Text */}
-          <h1 className="text-[12vh] font-black italic md:hidden">
+          <h1 className="text-[12vh] font-black italic md:hidden leading-none text-center">
             <span
               className="text-white"
               style={{
                 WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
                 WebkitTextFillColor: "white",
+                letterSpacing: "0px", // Removes letter spacing
               }}
             >
               TEAM&nbsp;
             </span>
             <br />
-            <span className="text-blue-500 italic">ARDRA</span>
+            <span
+              className="text-blue-500 italic font-black"
+              style={{ letterSpacing: "0px" }} // Ensures no spacing for mobile view
+            >
+              ARDRA
+            </span>
           </h1>
         </div>
 
         {/* Full-Height Image */}
-        <div className="hidden md:flex flex-grow h-[40vh] md:h-[25vh] relative">
+        <div className="hidden lg:flex flex-grow h-[40vh] lg:h-[25vh] relative">
           <Image
             src="/sideimg.png" // Replace with the actual image path
             alt="Next to text image" // Replace with appropriate alt text
