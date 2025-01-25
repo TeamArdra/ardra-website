@@ -1,8 +1,6 @@
 import React from "react";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["700", "900"] });
 
 const TeamArdra: React.FC = () => {
   return (
@@ -30,7 +28,7 @@ const TeamArdra: React.FC = () => {
       </div>
       <div className="flex items-center flex-wrap lg:flex-nowrap">
       {/* Header Section */}
-      <div className="{montserrat.className} text-center lg:text-left">
+      <div className={`text-center lg:text-left`}>
         <h1 className="text-[12vh] font-black italic lg:text-[23vh]">
           <span
             className="text-white"

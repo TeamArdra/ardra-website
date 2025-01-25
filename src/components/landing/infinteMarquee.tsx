@@ -31,7 +31,7 @@ const MyMarquee = () => {
         speed={20}
         pauseOnHover
       >
-        Bold dreamers, fearless innovators, and relentless creators—redefining the future of flight with cutting-edge autonomous drones. Driven by a passion 
+        Bold dreamers, fearless innovators and relentless creators redefining the future of flight with cutting-edge autonomous drones. Driven by a passion
       </Marquee>
       <Marquee
         className="w-full text-blue-500 font-bold overflow-hidden"
@@ -39,7 +39,7 @@ const MyMarquee = () => {
         speed={20}
         pauseOnHover
       >
-        for progress, we merge technology with imagination, crafting machines that soar beyond boundaries and inspire new possibilities. Every rotor spins with purpose, 
+        for progress, we merge technology with imagination , crafting machines that soar beyond boundaries and inspire new possibilities. Every rotor spins with purpose,
       </Marquee>
       <Marquee
         className="w-full text-blue-500 font-bold overflow-hidden"
@@ -47,14 +47,16 @@ const MyMarquee = () => {
         speed={20}
         pauseOnHover
       >
-        every circuit pulses with ambition, Curiosity and every line of code fuels our vision of a smarter, limitless tomorrow. Together, we’re not just building drones; 
+        every circuit pulses with ambition , curiosity , and every line of code fuels our vision of a smarter , limitless tomorrow. Together , we&apos;re not just building drones,
       </Marquee>
       <Marquee
         className="w-full text-blue-500 font-bold overflow-hidden"
         gradient={false}
         speed={20}
         pauseOnHover
-      >we're shaping the skies and unlocking the future of innovation. Join us in taking flight,where the only limit is how high we dare to dream.</Marquee>
+      >
+        we&apos;re shaping the skies and unlocking the future of innovation. Join us in taking flight, where the only limit is how high we dare to dream.
+      </Marquee>
 
       {/* Blue horizontal rule on bottom */}
       <hr className="border-t-8 border-blue-500" />
