@@ -34,14 +34,15 @@ const TeamArdra: React.FC = () => {
 
       <div className="flex items-center flex-wrap lg:flex-nowrap w-full lg:w-auto text-center">
         {/* Header Section */}
-        <div className={`{montserrat.className} text-center lg:text-left`}>
+        <div className={`${montserrat.className} text-center lg:text-left`}>
           {/* Desktop Text */}
-          <h1 className="text-[12vh] font-black italic lg:text-[23vh] hidden md:block">
+          <h1 className="text-[12vh] font-bold italic lg:text-[23vh] hidden md:block">
             <span
               className="text-white"
               style={{
                 WebkitTextStroke: "2px #3B82F6", // Tailwind color for blue-500
                 WebkitTextFillColor: "white",
+                textRendering: "geometricPrecision"// Enhances stroke rendering
               }}
             >
               TEAM&nbsp;
