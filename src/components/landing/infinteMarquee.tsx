@@ -1,6 +1,6 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import { Bebas_Neue } from '@next/font/google';
+import { Bebas_Neue } from 'next/font/google';
 import Image from 'next/image';
 
 const bebas = Bebas_Neue({
