@@ -16,17 +16,21 @@ const MyMarquee = () => {
 
       {/* Central Image */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <Image
-          src="/center-image.png" // Replace with the actual image path
-          alt="Central Image"
-          width={200}
-          height={200}
-        />
-      </div>
+  <div className="w-40 h-40 md:w-52 md:h-52">
+    <Image
+      src="/center-image.png" // Replace with the actual image path
+      alt="Central Image"
+      width={200} // Use any value here; the container controls the size
+      height={200}
+      className="w-full h-full object-contain" // Ensures the image scales within the container
+    />
+  </div>
+</div>
+
 
       {/* Marquee Text */}
       <Marquee
-        className="w-full text-blue-500 font-bold overflow-hidden"
+        className="w-full text-blue-500 font-bold overflow-hidden text-xl sm:text-3xl"
         gradient={false}
         speed={20}
         pauseOnHover
@@ -34,7 +38,7 @@ const MyMarquee = () => {
         Bold dreamers, fearless innovators and relentless creators redefining the future of flight with cutting-edge autonomous drones. Driven by a passion
       </Marquee>
       <Marquee
-        className="w-full text-blue-500 font-bold overflow-hidden"
+        className="w-full text-blue-500 font-bold overflow-hidden text-xl sm:text-3xl"
         gradient={false}
         speed={20}
         pauseOnHover
@@ -42,7 +46,7 @@ const MyMarquee = () => {
         for progress, we merge technology with imagination , crafting machines that soar beyond boundaries and inspire new possibilities. Every rotor spins with purpose,
       </Marquee>
       <Marquee
-        className="w-full text-blue-500 font-bold overflow-hidden"
+        className="w-full text-blue-500 font-bold overflow-hidden text-xl sm:text-3xl"
         gradient={false}
         speed={20}
         pauseOnHover
@@ -50,7 +54,7 @@ const MyMarquee = () => {
         every circuit pulses with ambition , curiosity , and every line of code fuels our vision of a smarter , limitless tomorrow. Together , we&apos;re not just building drones,
       </Marquee>
       <Marquee
-        className="w-full text-blue-500 font-bold overflow-hidden"
+        className="w-full text-blue-500 font-bold overflow-hidden text-xl sm:text-3xl"
         gradient={false}
         speed={20}
         pauseOnHover
