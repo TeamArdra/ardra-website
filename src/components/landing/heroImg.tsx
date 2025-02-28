@@ -9,42 +9,59 @@ const montserrat = Montserrat({
 
 const TeamArdra: React.FC = () => {
   return (
-    <div>
-      {/* Image Section */}
-      <div className="mt-16 w-full group relative">
+    <div className="flex flex-col items-center">
+      {/* Top Image - Made Smaller */}
+      <div className="w-screen max-h-4xl group relative mt-10 md:mt-4">
         {/* Default Image */}
         <Image
-          src="/drone-img1.png" // Replace with the actual image path
-          alt="Default Image" // Replace with appropriate alt text
-          layout="responsive"
+          src="/drone-img1.png" 
+          alt="Default Image"
           width={8426}
           height={2544}
-          className="block group-hover:hidden" // Hide this image on hover
+          className="block group-hover:hidden w-full h-auto"
         />
         {/* Hover Image */}
         <Image
-          src="/drone-img1.png" // Replace with the hover image path
-          alt="Hover Image" // Replace with appropriate alt text
-          layout="responsive"
+          src="/drone-img1.png"
+          alt="Hover Image"
           width={8426}
           height={2544}
-          className="hidden group-hover:block" // Show this image on hover
+          className="hidden group-hover:block w-full h-auto"
         />
       </div>
 
-      <div className="flex items-center flex-wrap lg:flex-nowrap w-full lg:w-auto text-center">
-        {/* Header Section */}
-        <div className={`${montserrat.className} text-center lg:text-left`}>
-          {/* Desktop Text */}
-          <h1 className="text-[12vh] font-bold italic lg:text-[23vh] hidden md:block">
+      {/* Header Section with Full-Width Side Image */}
+      <div className="flex items-center w-full mt-2">
+        {/* Text Section */}
+        <div className={`${montserrat.className} text-center lg:text-left w-full lg:w-auto`}>
+          {/* Desktop Text (Large Screens) */}
+          <h1 className="hidden lg:block text-[20vh] font-bold italic leading-none">
             <span
               style={{
                 textShadow: `
                   -3px -3px 0 #3B82F6,
                   3px -3px 0 #3B82F6,
                   -3px 3px 0 #3B82F6,
-                  3px 3px 0 #3B82F6`, // Simulates an outline effect in blue
-                color: "white", // Ensures the text inside the shadow is white
+                  3px 3px 0 #3B82F6`,
+                color: "white",
+                display: "inline-block",
+              }}
+            >
+              TEAM&nbsp;
+            </span>
+            <span className="text-blue-500 italic">ARDRA</span>
+          </h1>
+          
+          {/* Tablet Text (Medium Screens) */}
+          <h1 className="hidden md:block lg:hidden text-[14vh] font-bold italic leading-none">
+            <span
+              style={{
+                textShadow: `
+                  -3px -3px 0 #3B82F6,
+                  3px -3px 0 #3B82F6,
+                  -3px 3px 0 #3B82F6,
+                  3px 3px 0 #3B82F6`,
+                color: "white",
                 display: "inline-block",
               }}
             >
@@ -53,40 +70,41 @@ const TeamArdra: React.FC = () => {
             <span className="text-blue-500 italic">ARDRA</span>
           </h1>
 
-          {/* Mobile Text */}
-          <h1 className="text-[12vh] font-black italic md:hidden leading-none text-center">
+          {/* Mobile Text (Small Screens) - Two Lines */}
+          <h1 className="md:hidden text-[12vh] font-black italic leading-none text-center">
             <span
-              className="text-white"
+              className="text-white block"
               style={{
                 textShadow: `
                   -3px -3px 0 #3B82F6,
                   3px -3px 0 #3B82F6,
                   -3px 3px 0 #3B82F6,
-                  3px 3px 0 #3B82F6`, // Blue outline effect for mobile view
+                  3px 3px 0 #3B82F6`,
                 color: "white",
-                letterSpacing: "0px", // Removes extra spacing
               }}
             >
-              TEAM&nbsp;
+              TEAM
             </span>
-            <br />
             <span
-              className="text-blue-500 italic font-black"
-              style={{ letterSpacing: "0px" }} // Ensures no spacing for mobile view
+              className="text-blue-500 italic font-black block mt-[-2vh]"
             >
               ARDRA
             </span>
           </h1>
         </div>
 
-        {/* Full-Height Image */}
-        <div className="hidden lg:flex flex-grow h-[40vh] lg:h-[25vh] relative">
-          <Image
-            src="/sideimg.png" // Replace with the actual image path
-            alt="Next to text image" // Replace with appropriate alt text
-            layout="fill" // Makes the image take up the entire container
-            objectFit="contain" // Ensures the image scales proportionally
-          />
+        {/* Side Image - Full Height, Desktop Only, Extending to Edge */}
+        <div className="hidden lg:block h-[20vh] flex-grow">
+          <div className="relative h-full w-full">
+            <Image
+              src="/sideimg.png"
+              alt="Next to text image"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="right"
+              className="h-full"
+            />
+          </div>
         </div>
       </div>
     </div>
